@@ -256,3 +256,70 @@ p {
 .consolecmd {
     
 }
+@keyframes flicker {
+    0%, 100% {opacity: 0.28;}
+    5%, 25%, 45%, 85% {opacity:0.35;}
+    10%, 20%, 40%, 95% {opacity: 0.24;}
+    15% {opacity: 0.91;}
+    30% {opacity: 0.66;}
+    35% {opacity: 0.68;}
+    50% {opacity: 0.96;}
+    55% {opacity: 0.09;}
+    60% {opacity: 0.20;}
+    65% {opacity: 0.72;}
+    70% {opacity: 0.53;}
+    75% {opacity: 0.37;}
+    80% {opacity: 0.71;}
+}
+@keyframes fadeInUp {
+0% {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+}
+8% {
+    opacity: 0.2;
+    clip-path: inset(0 85% 0 0);
+}
+16% { opacity: 0;
+    clip-path: inset(0 70% 0 0);
+}
+24% { opacity: 0.4;
+clip-path: inset(0 60% 0 0);
+}
+32% { 
+    opacity: 0.1;
+    clip-path: inset(0 60% 0 0);
+}
+40% {
+    opacity: 0.6;
+    clip-path: inset(0 36% 0 0);
+}
+56% {
+    opacity:0.8;
+    clip-path:inset(0 20% 0 0);
+}
+72% {
+    opacity: 0.9;
+    clip-path: inset(0 5% 0 0);
+}
+80% { opacity: 0.7;
+clip-path: inset(0 2% 0 0)}
+90% {
+    opacity: 0.95;
+    clip-path: inset(0 0 0 0)
+}
+100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0)
+}
+}
+@keyframes glitchReveal {
+0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+}
+100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+}
+}
