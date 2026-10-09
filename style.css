@@ -38,9 +38,51 @@ transform-origin: center;
 
 }
 button, input {
-
+font: inherit;
+}
+html::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    backround-image: url();
+    background-size: 110% 110%;
+    backgroundrepeat: no-repeat;
+    background-position: center;
+    filter: grayscale(0.7) brightness(0.4);
+    z-index: 10000;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+}
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.55) 50%),
+    linear-gradient(90deg, rgba(255, 181, 0, 0.08), rgba(255, 183, 0, 0.02) rgba(255, 181, 0, 0.08));
+    z-index: 1000;
+    background-size: 100% 2px, 2px 100%;
+    pointer-events: none;
+}
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.18);
+    z-index: 1001;
+    pointer-events: none;
+    animation: flicker 0.18s infinite;
 }
 .prosphectcctv-onscrendisplay {
+    position: fixed;
+    top: 6vh;
+    left: 14vw;
+    right: 14vw;
+    bottom: 6vh;
+    z-index:  500;
+    pointer-events: none;
+    font-size: 14px;
+    color: var(--accent);
 
 }
 .osdtopleft {
