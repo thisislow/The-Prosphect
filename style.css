@@ -167,7 +167,7 @@ body::after {
 }
 
 .windbtn,
-.navclickies {
+ {
   background: var(--panel);
   color: var(--fg);
   border: 1px solid var(--accent);
@@ -209,17 +209,21 @@ body::after {
   border-bottom: 2px solid #222;
 }
 
-.navigationclickies {
+.navigationclickies
+ {
   display: flex;
   gap: 3px;
 }
 
-.navclickies {
+.navclickies
+.saveclickie
+.loadclickie {
   border-top-color: var(--accent);
   border-left-color: var(--accent);
   border-right-color: #000;
   border-bottom-color: #000;
 }
+
 
 .address-input {
   min-width: 0;

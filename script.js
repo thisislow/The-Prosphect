@@ -17,3 +17,18 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 1000);
+function saveSlot() {
+const SAVE_KEY = "save_slot";
+document.getElementById('saveclickie').addEventListener('click', () => {
+const currentPlace = window.location.href; 
+localStorage.setItem(SAVE_KEY, currentPlace);
+alert("Saved place.");
+});
+
+document.getElementById('loadclickie').addEventListener('click', () => { const savedPlace = localStorage.getItem(SAVE_KEY);
+    if (savedPlace) {
+        window.location.href = savedPlace;
+    } else {
+        alert("Nothing has been saved previously.");
+    }
+});
