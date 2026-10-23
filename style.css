@@ -166,8 +166,7 @@ body::after {
   gap: 2px;
 }
 
-.windbtn,
- {
+.windbtn {
   background: var(--panel);
   color: var(--fg);
   border: 1px solid var(--accent);
@@ -215,8 +214,8 @@ body::after {
   gap: 3px;
 }
 
-.navclickies
-.saveclickie
+.backclickie,
+.saveclickie,
 .loadclickie {
   border-top-color: var(--accent);
   border-left-color: var(--accent);

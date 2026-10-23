@@ -24,29 +24,34 @@ setInterval(updateTime, 1000);
 const SAVE_KEY = "save_slot";
 
 function saveSlot() {
-    const saveButton = document.getElementById("saveclickie");
-    const loadButton = document.getElementById("loadclickie");
+    const backButton = document.querySelector(".backclickie");
+    const saveButton = document.querySelector(".saveclickie");
+    const loadButton = document.querySelector(".loadclickie");
 
-    if (!saveButton || !loadButton) {
-        console.error("Could not find the Save or Load button. Check their IDs.");
-        return;
+    if (backButton) {
+        backButton.addEventListener("click", () => {
+            window.history.back();
+        });
     }
 
-    saveButton.addEventListener("click", () => {
-        const currentPlace = window.location.href;
-        localStorage.setItem(SAVE_KEY, currentPlace);
-        alert("Saved place.");
-    });
+    if (saveButton) {
+        saveButton.addEventListener("click", () => {
+            localStorage.setItem(SAVE_KEY, window.location.href);
+            alert("Saved place.");
+        });
+    }
 
-    loadButton.addEventListener("click", () => {
-        const savedPlace = localStorage.getItem(SAVE_KEY);
+    if (loadButton) {
+        loadButton.addEventListener("click", () => {
+            const savedPlace = localStorage.getItem(SAVE_KEY);
 
-        if (savedPlace) {
-            window.location.href = savedPlace;
-        } else {
-            alert("Nothing has been saved previously.");
-        }
-    });
+            if (savedPlace) {
+                window.location.href = savedPlace;
+            } else {
+                alert("Nothing has been saved previously.");
+            }
+        });
+    }
 }
 
 
