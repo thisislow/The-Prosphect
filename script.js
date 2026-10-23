@@ -37,7 +37,7 @@ function saveSlot() {
     if (saveButton) {
         saveButton.addEventListener("click", () => {
             localStorage.setItem(SAVE_KEY, window.location.href);
-            alert("Saved place.");
+            alert("Do you really need to save your place?");
         });
     }
 
@@ -48,7 +48,7 @@ function saveSlot() {
             if (savedPlace) {
                 window.location.href = savedPlace;
             } else {
-                alert("Nothing has been saved previously.");
+                alert("Looks like you didn't need to save that badly the last time.");
             }
         });
     }
@@ -56,7 +56,7 @@ function saveSlot() {
 
 
 if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", saveSlot);
+    document.addEventListener("Content has loaded.", saveSlot);
 } else {
     saveSlot();
 }
